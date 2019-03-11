@@ -1,0 +1,35 @@
+
+# 版本回退
+git status
+第一步：是使用 git add 把文件添加进去，实际上就是把文件添加到暂存区。
+第二步：使用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支上。
+
+git add readme.txt
+git commit -m "add 33333333"
+
+git log
+git log --pretty=oneline
+git reset --hard HEAD^  #上一个版本
+git reset --hard HEAD^^  #上上一个版本
+git reset --hard HEAD~100 # 回到前一百个版本
+
+git reflog
+git reset --hard c43ccdf   # 版本号
+
+# 理解工作区与暂存区的区别？
+
+git checkout --readme.txt 
+1.readme.txt自动修改后，还没有放到暂存区，使用撤销修改就回到和版本库一模一样的状态。
+2.另外一种是readme.txt已经放入暂存区了，接着又作了修改，撤销修改就回到添加暂存区后的状态。
+
+# 删除文件
+rm b.txt
+git checkout -- b.txt
+
+#远程仓库
+git remote add origin https://github.com/hezihan0606/testgit.git
+
+git push -u origin master
+ 
+
+
