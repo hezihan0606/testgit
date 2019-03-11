@@ -28,8 +28,10 @@ git checkout -- b.txt
 
 #远程仓库
 git remote add origin https://github.com/hezihan0606/testgit.git
-
 git push -u origin master
+
+#每次修改之后则可以通过一下命令进行同步操作
+git push origin master
  
 
 
